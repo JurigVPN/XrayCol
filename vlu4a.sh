@@ -76,6 +76,8 @@ apt dist-upgrade -y
 clear
 clear && clear && clear
 clear;clear;clear
+echo -e "${GREEN}ADD DOMAIN${NC}"
+echo -e "${GREEN}Note: Jika tidak mempunyai domain segera hubungi telegram @JurigVPN${NC}"
 read -p "Input Your Domain : " domain
 if [[ $domain == "" ]]; then
 clear
