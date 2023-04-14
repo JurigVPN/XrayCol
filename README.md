@@ -5,19 +5,12 @@
   ```html
  apt-get update && apt-get upgrade -y && apt dist-upgrade -y && update-grub && reboot
  ```
-## Yang ga punya domain lakukan perintah ini <br>
-  
-  ```html
- wget -q -O auto.sh https://raw.githubusercontent.com/fajar2461/cffff/main/auto && chmod +x auto.sh && ./auto.sh
- ```
 
 ## Installation Link<br>
 
   ```html
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/JurigVPN/XrayCol/main/vlu4a.sh && chmod +x vlu4a.sh && ./vlu4a.sh
   ```
-script colongan dari https://github.com/Vlukss dan dia dari https://github.com/arismaramar/gif yang saya edit dikit
-aslinya script bawaan ada fitur ssh, namun saya hapus karena memang ga idup websocketnya.
 
 [ XRAY SERVICES ] <br>
 <br>
