@@ -133,12 +133,13 @@ domain=$(cat /etc/xray/domain)
 LocalVersion=$(cat /root/versi)
 IPVPS=$(curl -s ipinfo.io/ip )
 ISPVPS=$( curl -s ipinfo.io/org )
+CITY=$(cat /etc/xray/city)
 token=5892284613:AAGOTY9ePR8KcSIgWPFFftbVuVNelb4fOuc
-chatid=1687681034
+chatid=-1001859856643
 ttoday="$(vnstat | grep today | awk '{print $8" "substr ($9, 1, 3)}' | head -1)"
 tmon="$(vnstat -m | grep `date +%G-%m` | awk '{print $8" "substr ($9, 1 ,3)}' | head -1)"
 DATE_EXEC="$(date "+%d %b %Y %H:%M")"
-CITY=$(cat $TMPFILE | jq '.city' | sed 's/"//g')
+#CITY=$(cat $TMPFILE | jq '.city' | sed 's/"//g')
 REGION=$(cat $TMPFILE | jq '.region' | sed 's/"//g')
 COUNTRY=$(cat $TMPFILE | jq '.country' | sed 's/"//g')
 curl -s -X POST "https://api.telegram.org/bot$token/sendMessage" -d chat_id="$chatid" -d text="
@@ -146,8 +147,8 @@ VPS INSTALL SC XRAY-ONLY
 IP      : $IPVPS
 Domain  : $domain
 Date    : $DATE_EXEC
-Location: $CITY, $REGION
-ISP     : $ORG" > /dev/null 2>&1
+Location: $CITY
+ISP     : $ISPVPS" > /dev/null 2>&1
 clear
 cat > /etc/cron.d/xp_otm <<-END
 SHELL=/bin/sh
